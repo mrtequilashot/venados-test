@@ -1,13 +1,9 @@
 <template lang="pug">
-    h1 hello
+    h1 hello HE
 </template>
 
 <script>
 export default {
-    name: 'App',
-}
+  name: 'App'
+};
 </script>
-
-<style>
-
-</style>
