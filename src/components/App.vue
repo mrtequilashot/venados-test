@@ -1,5 +1,6 @@
 <template lang="pug">
-    h1 hello HE
+    div(class="bg-green-300")
+      h1 hello
 </template>
 
 <script>

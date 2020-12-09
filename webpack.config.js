@@ -1,6 +1,7 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { HotModuleReplacementPlugin } = require('webpack');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const { VueLoaderPlugin } = require('vue-loader');
 
 module.exports = {
@@ -27,7 +28,11 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        loader: 'css-loader'
+        use: [
+          MiniCssExtractPlugin.loader,
+          'css-loader',
+          'postcss-loader'
+        ]
       },
       {
         test: /\.js$/,
@@ -37,11 +42,20 @@ module.exports = {
     ]
   },
   plugins: [
+    new MiniCssExtractPlugin({
+      filename: './src/assets/styles/styles.css',
+      chunkFilename: './src/assets/styles/styles.css'
+    }),
     new HtmlWebpackPlugin({
       filename: 'index.html',
       template: '/src/index.html'
     }),
     new HotModuleReplacementPlugin(),
     new VueLoaderPlugin()
-  ]
+  ],
+  resolve: {
+    alias: {
+      '@': path.resolve(__dirname, './src/'),
+    }
+  }
 };
