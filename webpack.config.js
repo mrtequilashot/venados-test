@@ -38,6 +38,14 @@ module.exports = {
         test: /\.js$/,
         loader: 'babel-loader',
         exclude: /node_modules/
+      },
+      {
+        test: /\.(png|jpe?g|gif)$/,
+        use: [
+          {
+            loader: 'file-loader'
+          }
+        ]
       }
     ]
   },
@@ -55,7 +63,7 @@ module.exports = {
   ],
   resolve: {
     alias: {
-      '@': path.resolve(__dirname, './src/'),
+      '@': path.resolve(__dirname, './src'),
     }
   }
 };
