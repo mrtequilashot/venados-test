@@ -1,6 +1,6 @@
 <template>
   <aside
-    class="bg-green-300 h-full"
+    class="bg-green-300 h-screen"
     :class="{'w-1/5': isOpen}"
   >
     <div class="flex flex-col">
