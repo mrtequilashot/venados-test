@@ -7,8 +7,8 @@
         <div
           v-for="player in position"
           :key="player.number"
-          @click="selectPlayer(player)"
           class="w-40 h-40 flex flex-col justify-center items-center cursor-pointer"
+          @click="selectPlayer(player)"
         >
           <img class="object-cover w-20 h-20 rounded-full" :src="player.image" alt="">
           <h1 class="text-white font-extrabold">{{ player.position }}</h1>

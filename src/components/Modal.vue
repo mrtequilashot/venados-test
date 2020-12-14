@@ -57,14 +57,26 @@ export default {
 }
 
 .modal__container {
-  background: #ffffff;
-  box-shadow: 2px 2px 20px 1px;
-  overflow-x: auto;
-  display: flex;
-  min-height: 80%;
-  width: 30%;
-  flex-direction: column;
+    background: #ffffff;
+    box-shadow: 2px 2px 20px 1px;
+    overflow-x: auto;
+    display: flex;
+    min-height: 80%;
+    width: 90%;
+    flex-direction: column;
 }
+
+@media (min-width: 768px) {
+    .modal__container {
+        background: #ffffff;
+        box-shadow: 2px 2px 20px 1px;
+        overflow-x: auto;
+        display: flex;
+        min-height: 80%;
+        width: 30%;
+        flex-direction: column;
+    }
+ }
 
 .modal__header,
 .modal__footer {
