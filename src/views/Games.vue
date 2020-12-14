@@ -19,7 +19,7 @@
         template(v-for="game, index in selectedGames")
           div(class="w-full flex flex-row h-40" :key="index")
             div(class="w-1/4 flex justify-center items-center")
-              h1.text-white.font-bold.text-xl {{ transformDate(game.datetime) }}
+              h1.text-white.font-bold.text-xl {{ game.datetime | DateToReadableFormat }}
             div(class="w-1/4 flex flex-col justify-center items-center")
               img(class="sm:w-auto h-20 object-contain" :src="'src/assets/img/venadosfc.jpg'")
               h1.text-white.font-bold.text-xl Venados
@@ -51,10 +51,6 @@ export default {
     this.games = data;
   },
   methods: {
-    transformDate(datetime) {
-      const options = { month: 'long', day: 'numeric' };
-      return new Date(datetime).toLocaleDateString(undefined, options);
-    }
   }
 };
 </script>

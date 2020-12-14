@@ -63,6 +63,7 @@ export default {
   min-height: 80%;
   width: 90%;
   flex-direction: column;
+  justify-content: space-around;
 }
 
 @media (min-width: 768px) {
@@ -74,6 +75,7 @@ export default {
     min-height: 80%;
     width: 30%;
     flex-direction: column;
+    justify-content: space-around;
   }
 }
 
@@ -81,6 +83,7 @@ export default {
 .modal__footer {
   padding: 15px;
   display: flex;
+  height: 10%;
 }
 
 .modal__header {
@@ -96,6 +99,7 @@ export default {
 .modal__body {
   position: relative;
   padding: 20px 10px;
+  height: 80%;
 }
 .btn__close {
   border: none;
