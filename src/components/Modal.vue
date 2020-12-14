@@ -13,7 +13,6 @@ export default {
     <div class="modal">
       <div
         class="modal__container"
-        role="dialog"
       >
         <header class="modal__header">
           <slot name="header">
@@ -27,7 +26,7 @@ export default {
           </slot>
         </header>
         <section class="modal__body">
-          <slot name="body"></slot>
+          <slot name="body" />
         </section>
         <footer class="modal__footer">
           <slot name="footer">
@@ -35,7 +34,7 @@ export default {
               type="button"
               @click="close"
             >
-                CERRAR
+              CERRAR
             </button>
           </slot>
         </footer>
@@ -57,26 +56,26 @@ export default {
 }
 
 .modal__container {
+  background: #ffffff;
+  box-shadow: 2px 2px 20px 1px;
+  overflow-x: auto;
+  display: flex;
+  min-height: 80%;
+  width: 90%;
+  flex-direction: column;
+}
+
+@media (min-width: 768px) {
+  .modal__container {
     background: #ffffff;
     box-shadow: 2px 2px 20px 1px;
     overflow-x: auto;
     display: flex;
     min-height: 80%;
-    width: 90%;
+    width: 30%;
     flex-direction: column;
+  }
 }
-
-@media (min-width: 768px) {
-    .modal__container {
-        background: #ffffff;
-        box-shadow: 2px 2px 20px 1px;
-        overflow-x: auto;
-        display: flex;
-        min-height: 80%;
-        width: 30%;
-        flex-direction: column;
-    }
- }
 
 .modal__header,
 .modal__footer {
@@ -99,12 +98,12 @@ export default {
   padding: 20px 10px;
 }
 .btn__close {
-    border: none;
-    font-size: 20px;
-    padding: 20px;
-    cursor: pointer;
-    font-weight: bold;
-    color: black;
-    background: transparent;
-  }
+  border: none;
+  font-size: 20px;
+  padding: 20px;
+  cursor: pointer;
+  font-weight: bold;
+  color: black;
+  background: transparent;
+}
 </style>
