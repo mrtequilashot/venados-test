@@ -16,6 +16,7 @@ import GamesView from '@/views/Games.vue';
 import PlayersView from '@/views/Players.vue';
 import StatisticsView from '@/views/Statistics.vue';
 
+
 export default {
   name: 'App',
   components: {
