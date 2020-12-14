@@ -11,18 +11,21 @@
       >
       <button
         class="h-20 bg-red-300 border-4 border-black-500 text-center hover:bg-yellow-300 truncate"
+        @click="goToView('home')"
       >
         Home
       </button>
       <button
         class="h-20 bg-red-300 border-4 border-black-500 text-center hover:bg-yellow-300 truncate"
+        @click="goToView('statistics')"
       >
         Estadisticas
       </button>
       <button
         class="h-20 bg-red-300 border-4 border-black-500 text-center hover:bg-yellow-300 truncate"
+        @click="goToView('players')"
       >
-        Jugador
+        Jugadores
       </button>
     </div>
   </aside>
@@ -35,6 +38,10 @@ export default {
     isOpen: {
       type: Boolean,
       default: false
+    },
+    goToView: {
+      type: Function,
+      default: null
     }
   }
 };
